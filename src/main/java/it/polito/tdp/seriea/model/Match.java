@@ -5,11 +5,9 @@ import java.time.LocalDate;
 public class Match {
 
 	private int id;
-	private Season season;
-	private String div;
 	private LocalDate date;
-	private Team homeTeam;
-	private Team awayTeam;
+	private String homeTeam;
+	private String awayTeam;
 	private int fthg; // full time home goals
 	private int ftag; // full time away goals
 	private String ftr; // full time result (H, A, D)
@@ -28,11 +26,9 @@ public class Match {
 	 * @param ftag
 	 * @param ftr
 	 */
-	public Match(int id, Season season, String div, LocalDate date, Team homeTeam, Team awayTeam, int fthg, int ftag, String ftr) {
+	public Match(int id, LocalDate date, String homeTeam, String awayTeam, int fthg, int ftag, String ftr) {
 		super();
 		this.id = id;
-		this.season = season;
-		this.div = div;
 		this.date = date;
 		this.homeTeam = homeTeam;
 		this.awayTeam = awayTeam;
@@ -48,19 +44,6 @@ public class Match {
 		return id;
 	}
 
-	/**
-	 * @return the season
-	 */
-	public Season getSeason() {
-		return season;
-	}
-
-	/**
-	 * @return the div
-	 */
-	public String getDiv() {
-		return div;
-	}
 
 	/**
 	 * @return the date
@@ -72,14 +55,14 @@ public class Match {
 	/**
 	 * @return the homeTeam
 	 */
-	public Team getHomeTeam() {
+	public String getHomeTeam() {
 		return homeTeam;
 	}
 
 	/**
 	 * @return the awayTeam
 	 */
-	public Team getAwayTeam() {
+	public String getAwayTeam() {
 		return awayTeam;
 	}
 
@@ -112,21 +95,6 @@ public class Match {
 		this.id = id;
 	}
 
-	/**
-	 * @param season
-	 * the season to set
-	 */
-	public void setSeason(Season season) {
-		this.season = season;
-	}
-
-	/**
-	 * @param div
-	 * the div to set
-	 */
-	public void setDiv(String div) {
-		this.div = div;
-	}
 
 	/**
 	 * @param date
@@ -140,7 +108,7 @@ public class Match {
 	 * @param homeTeam
 	 * the homeTeam to set
 	 */
-	public void setHomeTeam(Team homeTeam) {
+	public void setHomeTeam(String homeTeam) {
 		this.homeTeam = homeTeam;
 	}
 
@@ -148,7 +116,7 @@ public class Match {
 	 * @param awayTeam
 	 * the awayTeam to set
 	 */
-	public void setAwayTeam(Team awayTeam) {
+	public void setAwayTeam(String awayTeam) {
 		this.awayTeam = awayTeam;
 	}
 
